@@ -1,0 +1,10 @@
+@mixin cubic-transition($property: all, $time: .5s, $p1x: .75, $p1y: 0, $p2x: .25, $p2y: 1) {
+    -webkit-transition: $property $time cubic-bezier($p1x, $p1y, $p2x, $p2y);
+    -moz-transition: $property $time cubic-bezier($p1x, $p1y, $p2x, $p2y);
+    -o-transition: $property $time cubic-bezier($p1x, $p1y, $p2x, $p2y);
+    transition: $property $time cubic-bezier($p1x, $p1y, $p2x, $p2y);
+}
+
+@mixin power4-transition($property: all, $time: .5s) {
+    @include cubic-transition($property, $time, .26, .9, .21, 1);
+}
