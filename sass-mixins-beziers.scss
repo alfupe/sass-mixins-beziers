@@ -8,3 +8,7 @@
 @mixin power4-transition($property: all, $time: .5s) {
     @include cubic-transition($property, $time, .26, .9, .21, 1);
 }
+
+@mixin expo-transition($property: all, $time: .5s) {
+    @include cubic-transition($property, $time, .27, .71, .39, 1);
+}
